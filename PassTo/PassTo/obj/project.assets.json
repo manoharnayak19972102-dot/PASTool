@@ -9781,11 +9781,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\PassTo.csproj",
+      "projectUniqueName": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\PGit\\PassTo\\PassTo\\PassTo.csproj",
       "projectName": "PassTo",
-      "projectPath": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\PassTo.csproj",
+      "projectPath": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\PGit\\PassTo\\PassTo\\PassTo.csproj",
       "packagesPath": "C:\\Users\\COE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\obj\\",
+      "outputPath": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\PGit\\PassTo\\PassTo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
