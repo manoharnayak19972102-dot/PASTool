@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "TrustStore";
+}
+
+<script type="text/javascript">
+
+    var truststoreApp = {
+        start_action: function () {
+            Promise.all([
+                //BasicInfo.start_action("BasicInfo", null),
+               
+                TrustStore.start_action("TrustStore", { "title": "Trust Store" }, IDBIndex.EditCallBack, false),
+                //UploadCRL.start_action("UploadCRL", { "title": "Upload CRL " }, IDBIndex.EditCallBack, false),
+          
+            ]).then(values => {
+                truststoreApp.afterRender();
+                // setInterval(() => {
+                //     $.ajax({ url: config.contextPath + "Home/GetServerTime" }).done(jData => {
+                //         let s = jData;
+                //         if (s === "0") document.location = config.contextPath
+                //     }).fail((xhr, et) => document.location = config.contextPath)
+                // }, 30000);
+            });
+        },
+        EditCallBack: function (obj) {
+            alert(JSON.stringify(obj, null, ' '));
+            //FileNomination.doEditFill(obj);
+        },
+        afterRender: function () {
+            theApp.goSomeWhere();
+
+            var short_cuts = [];
+            var short_cut = {};
+
+            
+
+            short_cut = {}; short_cut.id = "TrustStore"; short_cut.text = "Trust Store";
+            short_cuts.push(short_cut);
+
+            // short_cut = {}; short_cut.id = "UploadCRL"; short_cut.text = "Upload CRL";
+            // short_cuts.push(short_cut);
+
+            Banner.Show_ShortCuts(short_cuts);
+            setTimeout(() => theApp.AOSInitialize(), 1000);
+        },
+    }; $(document).ready(() => truststoreApp.start_action())
+</script>
+ @* <BasicInfo></BasicInfo>  *@
+@* <TrustStore></TrustStore> *@
+@* <UploadCRL></UploadCRL> *@

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Publish";
+}
+<script type="text/javascript">
+   
+    var publishApp = {
+        start_action: function () {
+            Promise.all([
+                BasicInfo.start_action("BasicInfo", null),
+                Publish.start_action("Publish", null),
+                UpdatePassword.start_action("UpdatePassword", { "title": "Update Password" }),
+            ]).then(values => {
+                publishApp.afterRender();
+            });
+        },
+        afterRender: function () {
+            theApp.goSomeWhere();
+
+            var short_cuts = [];
+            var short_cut = {};
+
+            short_cut = {}; short_cut.id = "publish"; short_cut.text = "Publish";
+            short_cuts.push(short_cut);
+
+            short_cut = {}; short_cut.id = "UpdatePassword"; short_cut.text = "Update Password";
+            short_cuts.push(short_cut);
+
+            Banner.Show_ShortCuts(short_cuts);
+            setTimeout(() => theApp.AOSInitialize(), 1000);
+        },
+    }; $(document).ready(() => publishApp.start_action())
+</script>
+
+<Publish></Publish>
+<UpdatePassword></UpdatePassword>

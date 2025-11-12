@@ -1,0 +1,140 @@
+﻿<div id="configurations" class="d-none">
+    <div class="mt-4">
+        <div class="row mb-3" data-aos="zoom-in">
+            <div class="col text-center fw-bolder">
+                <span class="p-2 text-dark rounded">Configure your PKI</span>
+                <div>
+                    <h1 class="text-caption-color mt-3 mb-3 d-inline">Project : </h1>
+                    <h3 id="configuration_project_name" class="d-inline"></h3>
+                    <hr class="shr" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-4 info-pannel w-75" data-aos="zoom-in"  style="letter-spacing:2px;">
+        The Configuration Page in our CRL Manager application enables administrators to input CRL details and activate various certificate formats, including PEM and Multi PEM. This page offers a user-friendly interface for configuring essential settings, ensuring efficient and secure system operation.
+    </div>
+    <div class="container bg-pannel p-3 specials" data-aos="zoom-in">
+        <hr class="m-0" />
+        <div class="row fs-small aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="col">
+                <label class="fw-bold">Type </label> <div style="letter-spacing:2px;" class="fw-bold">PKI Setup Dual</div>
+            </div>
+            <div class="col">
+                <div class="float-end">
+                    <label class="fw-bold">Pending Action </label> <div style="letter-spacing:2px;" class="fw-bold">Congfiguration</div>
+                </div>
+            </div>
+        </div>
+        <hr class="m-0 mb-3" />
+        <div id="config_which_pki" class="input-group mb-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <label class="input-group-text fs-small fw-bold" for="pkiType">Select PKI</label>
+            <select id="all_pkis" class="form-control form-select fs-small" onchange="Configuration.WhichPKISelect(event)">                
+            </select>
+        </div>
+        <div id="jamakalam"></div>
+    </div>
+</div>
+<script id="dual_handlebar_template" type="text/template">
+    <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-3" style="border-right: 2px solid rgb(220,200,220); padding-right: 0px; ">
+            <ul class="nav nav-tabs flex-column">
+                [[#each this as |cert_row|]]
+                <li class="nav-item">
+                    <!--<a class="nav-link show  [[cert_row.isActive]]" href="#tab_[[cert_row.id]]" data-bs-toggle="tab"  onclick="Configuration.ClickTab(event, [[cert_row.id]])">[[cert_row.issuer]]</a>-->
+                    <a class="nav-link show  [[cert_row.isActive]]" href="#tab_[[cert_row.id]]" data-bs-toggle="tab" onclick="Configuration.ClickTab(event, [[cert_row.id]])">[[cert_row.subject]]</a>
+                </li>
+                [[/each]]
+            </ul>
+        </div>
+        <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+                [[#each this as |cert_row|]]
+                <div class="tab-pane show [[cert_row.isActive]]"  id="tab_[[cert_row.id]]">
+                    <div class="p-5 border border-2 border-secondary-subtle rounded-2 fs-small">
+                        <h3>Configure Certificate</h3>
+                        <div class=" fw-bolder" style="letter-spacing:2px;">[[cert_row.issuer]]</div>
+                        <hr class="m-0 mb-4" />
+                        <div class="input-group mt-2">
+                            <label for="crlName" class="input-group-text fs-small fw-bold text-secondary">CRL Name</label>
+                            <input id="crlName_[[cert_row.id]]" class="form-control col  fs-small ph-small" type="text" placeholder="Enter a name for CRL - a name like Ganga">
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="multiPEMName" class="input-group-text fs-small fw-bold text-secondary">Multi PEM Name:</label>
+                            <input id="multiPEMName_[[cert_row.id]]" name="multiPEMName" class="form-control  fs-small ph-small" type="text" placeholder="Enter a name for Multi PEM - a name like Bhrma Putra">
+                        </div>
+                        <div class="mt-2">
+                            <div class="input-group">
+                                <label for="distributionPoint" class="input-group-text fs-small fw-bold text-secondary">Distribution Point {url}</label>
+                                <input id="distributionPoint_[[cert_row.id]]" name="distributionPoint" class="form-control fs-small ph-small" type="text" placeholder="Enter URL here like - www.santabanta.com">
+                                <button id="CheckDPBtn" class="btn btn-sm btn-primary" onclick="Configuration.CheckDP(event, true)">Check DP</button>
+                                <div id="dpStatusMessage" class="p-2"></div>
+                            </div>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="crlSize" class="input-group-text fs-small fw-bold text-secondary">CRL Size(KB)</label>
+                            <input id="crlSize_[[cert_row.id]]" class="form-control fs-small ph-small" type="number" placeholder="1024 Bytes">
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="maxAttempts" class="input-group-text fs-small fw-bold text-secondary">Maximum Attemts</label>
+                            <input id="maxAttempts_[[cert_row.id]]" class="form-control fs-small ph-small" type="number" placeholder="5">
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="downloadPeriod" class="input-group-text  fs-small fw-bold text-secondary">Download Period</label>
+                            <select id="downloadPeriod_[[cert_row.id]]" class="form-select fs-small fw-bold text-secondary">
+                                <option value="1" selected>1</option>
+                                [[#times 2 downloadPeriod]]
+                                    <option value="[[this]]">[[this]]</option>
+                                [[/times]]
+                            </select>
+                        </div>
+                        <div class="mt-2 fw-bolder">CRL PEM Conversion</div>
+                        <div class="row mt-0">
+                            <div class="col">
+                                <div class="input-group">
+                                    <label for="projectIdupload" class="input-group-text fs-small fw-bold text-secondary">Enable</label>
+                                    <div class="form-control">
+                                        <input class="fs-small form-check-input mt-2" id="crl_pem_conversion_enable_[[cert_row.id]]" type="radio" name="crl_pem_conversion"  onchange="Configuration.crl_pem_conversion=true" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <label class="input-group-text fs-small fw-bold text-secondary" for="projectIdupload">Disable</label>
+                                    <div class="form-control">
+                                        <input class="fs-small form-check-input mt-2" id="crl_pem_conversion_disable_[[cert_row.id]]"  type="radio" name="crl_pem_conversion" onchange="Configuration.crl_pem_conversion=false" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 fw-bolder">Multi PEM Aggregation</div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <label for="projectIdupload" class="input-group-text fs-small fw-bold text-secondary">Enable</label>
+                                    <div class="form-control">
+                                        <input class=" fs-small form-check-input mt-2" id="multi_pem_aggregation_enable_[[cert_row.id]]" type="radio" name="multi_pem_conversion"  onchange="Configuration.multi_pem_conversion=true" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <label class="input-group-text fs-small fw-bold text-secondary" for="projectIdupload">Disable</label>
+                                    <div class="form-control">
+                                        <input class=" fs-small form-check-input mt-2" id="multi_pem_aggregation_disable_[[cert_row.id]]" type="radio" name="multi_pem_conversion" onchange="Configuration.multi_pem_conversion=false" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                [[/each]]
+                <div class="row mt-2">
+                    <div class="col">
+                        <button id="SaveOrUpdate" class="btn btn-primary" onclick="Configuration.SaveConfiguration(event)">Save</button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

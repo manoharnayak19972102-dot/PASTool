@@ -1,0 +1,194 @@
+﻿<div id="publish_component">
+    <div class="mt-4">
+        <div class="row mb-3" data-aos="zoom-in">
+            <div class="col text-center fw-bolder">
+                <span class="p-2 text-dark rounded">PKI</span>
+                <div>
+                    <h1 class="text-caption-color mt-3 mb-3">Download your CRL files </h1>
+                    <hr class="shr" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-pannel p-3" id="SinglePKIpublish" style="display:none">
+        <div class="row ">
+            <h2>Single PKI CRL Publish</h2>
+            <div class="col-lg-3" style="border-right:2px solid gray;">
+                <ul class="nav nav-tabs flex-column">
+                    {{#each this as |cert_row|}}
+                    <li class="nav-item">
+                        <a class="nav-link show" data-bs-toggle="tab" href="#{{cert_row.issuer}}">{{cert_row.issuer}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    {{#each this as |cert_row|}}
+                    <div class="tab-pane " id="{{cert_row.issuer}}">
+                        <h5 class="text-decoration-underline">{{cert_row.issuer}}</h5>
+                        <div id="configuration" class="p-4">
+                            <div>
+                                <label for="crlName">CRL Name:</label>
+                                <input id="crlName" name="crlName" class="form-control col text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="multiPEMName">Multi PEM Name:</label>
+                                <input id="multiPEMName" name="multiPEMName" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="distributionPoint">Distribution Point {url}:</label>
+                                <div>
+                                    <input id="distributionPoint" name="distributionPoint" class="form-control text-blazing" type="text">
+                                    <button id="CheckDPBtn" class="btn btn-primary" onclick="Configuration.CheckDP(event, true)">Check DP</button>
+                                    <div id="dpStatusMessage" class="p-2"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="crlSize">CRL Size(KB):</label>
+                                <input id="crlSize" name="crlSize" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="maxAttempts">Maximum Attemts:</label>
+                                <input id="maxAttempts" name="maxAttempts" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="downloadPeriod">Download Period:</label>
+                                <select name="downloadPeriod" class="form-select">
+                                    <option value="-1">Choose</option>
+                                    <option value="60">1 Hour</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="15">15 minutes</option>
+                                    <option value="10">10 minutes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="downloadPeriod">CRL PEM Conversion:</label>
+                                <span>
+                                    <label for="projectIdupload" style="">Enable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, true)" />
+                                </span>
+                                <span class="float-end">
+                                    <label for="projectIdupload" style="">Disable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, false)" />
+                                </span>
+
+
+                            </div>
+                            <div>
+                                <label for="multiPEMaggregation">Multi PEM Aggregation:</label>
+                                <span>
+                                    <label for="projectIdupload" style="">Enable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, true)" />
+                                </span>
+                                <span class="float-end">
+                                    <label for="projectIdupload" style="">Disable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, false)" />
+                                </span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <button id="addconfigurationbutton" class="btn btn-primary" onclick="Configuration.addConfiguration(event, true)">Save</button>
+                                    <button id="updateconfigurationbutton" class="btn btn-primary" onclick="Configuration.updateConfiguration(event, true)">Update</button>
+                                    <button id="deleteconfigurationbutton" class="btn btn-primary" onclick="Configuration.deleteConfiguration(event, true)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-pannel p-3" id="DualPKIPublish" style="display:none">
+        <h2>Dual PKI CRL Publish</h2>
+        <div class="row ">
+            <h4>PKI Configuration</h4>
+            <div class="col-lg-3" style="border-right:2px solid gray;">
+                <ul class="nav nav-tabs flex-column">
+                    {{#each this as |cert_row|}}
+                    <li class="nav-item">
+                        <a class="nav-link show" data-bs-toggle="tab" href="#{{cert_row.issuer}}">{{cert_row.issuer}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    {{#each this as |cert_row|}}
+                    <div class="tab-pane " id="{{cert_row.issuer}}">
+                        <h5 class="text-decoration-underline">{{cert_row.issuer}}</h5>
+                        <div id="configuration" class="p-4">
+                            <div>
+                                <label for="crlName">CRL Name:</label>
+                                <input id="crlName" name="crlName" class="form-control col text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="multiPEMName">Multi PEM Name:</label>
+                                <input id="multiPEMName" name="multiPEMName" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="distributionPoint">Distribution Point {url}:</label>
+                                <div>
+                                    <input id="distributionPoint" name="distributionPoint" class="form-control text-blazing" type="text">
+                                    <button id="CheckDPBtn" class="btn btn-primary" onclick="Configuration.CheckDP(event, true)">Check DP</button>
+                                    <div id="dpStatusMessage" class="p-2"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="crlSize">CRL Size(KB):</label>
+                                <input id="crlSize" name="crlSize" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="maxAttempts">Maximum Attemts:</label>
+                                <input id="maxAttempts" name="maxAttempts" class="form-control text-blazing" type="text">
+                            </div>
+                            <div>
+                                <label for="downloadPeriod">Download Period:</label>
+                                <select name="downloadPeriod" class="form-select">
+                                    <option value="-1">Choose</option>
+                                    <option value="60">1 Hour</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="15">15 minutes</option>
+                                    <option value="10">10 minutes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="downloadPeriod">CRL PEM Conversion:</label>
+                                <span>
+                                    <label for="projectIdupload" style="">Enable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, true)" />
+                                </span>
+                                <span class="float-end">
+                                    <label for="projectIdupload" style="">Disable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, false)" />
+                                </span>
+
+
+                            </div>
+                            <div>
+                                <label for="multiPEMaggregation">Multi PEM Aggregation:</label>
+                                <span>
+                                    <label for="projectIdupload" style="">Enable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, true)" />
+                                </span>
+                                <span class="float-end">
+                                    <label for="projectIdupload" style="">Disable</label>
+                                    <input type="radio" name="pkiSetUp" onclick="Configuration.TogglePKISetUP(event, false)" />
+                                </span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <button id="addconfigurationbutton" class="btn btn-primary" onclick="Configuration.addConfiguration(event, true)">Save</button>
+                                    <button id="updateconfigurationbutton" class="btn btn-primary" onclick="Configuration.updateConfiguration(event, true)">Update</button>
+                                    <button id="deleteconfigurationbutton" class="btn btn-primary" onclick="Configuration.deleteConfiguration(event, true)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

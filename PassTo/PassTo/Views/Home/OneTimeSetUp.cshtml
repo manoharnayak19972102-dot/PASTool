@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Setup";
+}
+<script type="text/javascript">
+    var theOneTimeSetupApp = {
+        start_action: function () {
+            Projects.start_action("Projects", null);
+            PKISetup.start_action("PKISetup", null);
+            Configuration.start_action(null,"Configuration");
+            setTimeout( () => {
+                theOneTimeSetupApp.afterRender();
+            }, 1000);
+        },
+        afterRender: function () {
+            theApp.goSomeWhere();
+
+            var short_cuts = [];
+            var short_cut = {};
+
+            short_cut = {}; short_cut.id = "prj_details"; short_cut.text = "Projects";
+            short_cuts.push(short_cut);
+
+            short_cut = {}; short_cut.id = "prj_setup"; short_cut.text = "PKi Setup";
+            short_cuts.push(short_cut);
+
+            short_cut = {}; short_cut.id = "configurations"; short_cut.text = "Configuration";
+            short_cuts.push(short_cut);
+
+            // short_cut = {}; short_cut.isExternal = true;
+            // short_cut.id = "https://www.pexels.com/search/night%20train/";
+            // short_cut.text = "Night Life";
+            // short_cuts.push(short_cut);
+
+            Banner.Show_ShortCuts(short_cuts);
+            setTimeout(() => theApp.AOSInitialize(), 1000);
+        },
+    }; $(document).ready(() => theOneTimeSetupApp.start_action())
+</script>
+
+<Projects></Projects>
+<PKISetup></PKISetup>
+<Configuration></Configuration>

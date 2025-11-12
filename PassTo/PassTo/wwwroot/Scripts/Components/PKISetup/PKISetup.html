@@ -1,0 +1,180 @@
+﻿<div id="prj_setup" class="d-none">
+    <div class="mt-4">
+        <div class="row mb-3" data-aos="zoom-in">
+            <div class="col text-center fw-bolder">
+                <span class="p-2 text-dark rounded">PKI Setup</span>
+                <div>
+                    <h1 class="text-caption-color mt-3 mb-3 d-inline"> </h1>
+                    <h3 id="pki_setup_project_name" class="d-inline"></h3>
+                    <hr class="shr" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-4 info-pannel w-75" data-aos="zoom-in"  style="letter-spacing:2px;">
+        A PKI trust store is a repository that stores certificates used in a Public Key Infrastructure (PKI). It contains root certificates and intermediate certificates from trusted Certificate Authorities (CAs). These certificates are used to establish a chain of trust, ensuring that any digital certificate presented can be validated against a trusted source.
+        The PKI trust store plays a crucial role in maintaining security and integrity.
+    </div>
+    <div class="container bg-pannel p-5" data-aos="zoom-in">
+        <div id="PKISetUpSingle">
+            <hr class="m-0" />
+            <div class="row fs-small">
+                <div class="col">
+                    <label class="fw-bold">Type </label> <div style="letter-spacing:2px;" class="fw-bold">PKI Setup Single</div>
+                </div>
+                <div class="col">
+                    <div class="float-end">
+                        <label class="fw-bold">Pending Action </label> <div style="letter-spacing:2px;" class="fw-bold">Import Certificate</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0 mb-3" />
+            <div class="border border-1 rounded-2 p-2 mb-2">
+                <div class="row fs-small">
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-text fs-small">
+                                <input id="singleFile" checked name="fileType_PKISingle" class="form-check-input mt-0" type="radio" aria-label="radio for following text input" onclick="PKISetup.toggleSPKIButton(true)">
+                            </div>
+                            <label type="text" style="letter-spacing:2px;" class="form-control fs-small" aria-label="Text input with radio">
+                                .cer, .crt, .der, .pem
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col p-1 pt-1 text-center fs-small fw-bold bg-light border border-1 rounded-1">
+                        <label class="" for="projectIdupload">Select File Type</label>
+                        <!-- <button id="S" class="btn btn-primary w-100" onclick="PKISetup.saveSetup(event, true)">save</button>-->
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <label class="form-control fs-small" for="projectIdupload" style="letter-spacing:2px;">.p7b, .pem</label>
+                            <div class="input-group-text fs-small">
+                                <input class="form-check-input mt-0" type="radio" id="multipleFile" name="fileType_PKISingle" onclick="PKISetup.toggleSPKIButton(false)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="SPKIsingleFileSection" class="mt-3">
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIrootCertificate">
+                    <label class="input-group-text fw-bold fs-small">Root CA<sup>*</sup></label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate1">
+                    <span class="input-group-text  fs-small fw-bold" for="file">Intermediate&nbsp;&nbsp;&nbsp;&#10102;</span>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate2">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10103;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate3">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10104;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate4">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10105;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate5">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10106;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIintermediateCertificate6">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10107;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="SPKIissuingCertificate">
+                    <label for="file" class="input-group-text fs-small fw-bold">Issuing CA<sup>*</sup></label>
+                </div>
+                <div>
+                    <button id="SPKIuploadCertificates" class="btn btn-primary w-100" onclick="PKISetup.SPKIuploadCertificateChain(event, true)">Upload</button>
+                </div>
+            </div>
+            <div id="SPKImultipleFileSection" style="display:none;">
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".p7b,.pem" type="file" id="certificateFile">
+                    <label for="file" class="input-group-text fs-small fw-bold" style="">Upload Certificate</label>
+                </div>
+                <div>
+                    <button id="SPKIuploadMultifilebutton" class="btn btn-primary w-100 " onclick="PKISetup.uploadMultipleCertificate(event, true)">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div id="PKISetUpDual" style="display:none">
+            <hr class="m-0" />
+            <div class="row fs-small">
+                <div class="col">
+                    <label class="fw-bold">Type </label> <div style="letter-spacing:2px;" class="fw-bold">PKI Setup Dual</div>
+                </div>
+                <div class="col">
+                    <div class="float-end">
+                        <label class="fw-bold">Pending Action </label> <div style="letter-spacing:2px;" class="fw-bold">Import Certificate</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-0 mb-3" />
+            <div class="input-group mb-2">
+                <label class="input-group-text fs-small fw-bold" for="which_pki">Select PKI</label>
+                <select id="which_pki" name="which_pki" class="form-control form-select fs-small">
+                    <option value="PKI1">Primary PKI</option>
+                    <option value="PKI2">Secondary PKI</option>
+                </select>
+            </div>
+            <div class="border border-1 rounded-2 p-2 mb-2">
+                <div class="row fs-small">
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-text fs-small">
+                                <input id="singleFile" checked name="fileType" class="form-check-input mt-0" type="radio" aria-label="radio for following text input" onclick="PKISetup.toggleDPKIButton(true)">
+                            </div>
+                            <label style="letter-spacing:2px;" type="text" class="form-control fs-small" aria-label="Text input with radio">.cer, .crt, .der, .pem</label>
+                        </div>
+                    </div>
+                    <div class="col p-1 pt-1 text-center fs-small fw-bold bg-light border border-1 rounded-1">
+                        <label class="" for="projectIdupload">Select File Type</label>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <label style="letter-spacing:2px;" class="form-control fs-small" for="projectIdupload">.p7b, .pem</label>
+                            <div class="input-group-text fs-small">
+                                <input class="form-check-input mt-0" type="radio" id="multipleFile" name="fileType" value="multiple" onclick="PKISetup.toggleDPKIButton(false)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DPKIsingleFileSection">
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="DPKIrootCertificate">
+                    <label for="file" class="input-group-text fs-small fw-bold">Root CA<sup>*</sup></label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="DPKIintermediateCertificate1">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10102;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="DPKIintermediateCertificate2">
+                    <label for="file" class="input-group-text fs-small fw-bold">Intermediate&nbsp;&nbsp;&nbsp;&#10103;</label>
+                </div>
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".cer, .crt, .der, .pem" type="file" id="DPKIissuingCertificate">
+                    <label for="file" class="input-group-text fs-small fw-bold">Issuing CA<sup>*</sup></label>
+                </div>
+                <div>
+                    <button id="DPKIuploadCertificates" class="btn btn-primary w-100" onclick="PKISetup.DPKIuploadCertificateChain(event, true)">Upload</button>
+                </div>
+            </div>
+            <div id="DPKImultipleFileSection" style="display:none;">
+                <div class="input-group mb-2">
+                    <input class="form-control fs-small" accept=".p7b,.pem" type="file" id="DPKIcertificateFile">
+                    <label for="file" class="input-group-text fs-small fw-bold" style="">Upload Certificate</label>
+                </div>
+                <div>
+                    <button id="DPKIuploadMultifilebutton" class="btn btn-primary w-100" onclick="PKISetup.DPKIuploadMultipleCertificate(event, true)">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

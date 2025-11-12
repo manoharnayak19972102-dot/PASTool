@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\passto.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\passto.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\wwwroot\\scripts\\components\\nmap\\nmap.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\wwwroot\\scripts\\components\\nmap\\nmap.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\wwwroot\\scripts\\components\\user\\user.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\wwwroot\\scripts\\components\\user\\user.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\wwwroot\\scripts\\components\\user\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\wwwroot\\scripts\\components\\user\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\wwwroot\\scripts\\components\\reuse\\alertify\\alertify.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\wwwroot\\scripts\\components\\reuse\\alertify\\alertify.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|c:\\users\\coe\\documents\\workspace\\pas\\code\\the pas tool\\the pas tool\\passto\\passto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CF23F48-FB2E-4651-B4ED-60C669DE52AD}|PassTo\\PassTo.csproj|solutionrelative:passto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PassTo",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\PassTo.csproj",
+              "RelativeDocumentMoniker": "PassTo\\PassTo.csproj",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\PassTo.csproj",
+              "RelativeToolTip": "PassTo\\PassTo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-04T08:59:27.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAE4CAAAAAAAAAAAhwGYCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-04T08:57:33.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "nMap.html",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\nMap\\nMap.html",
+              "RelativeDocumentMoniker": "PassTo\\wwwroot\\Scripts\\Components\\nMap\\nMap.html",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\nMap\\nMap.html",
+              "RelativeToolTip": "PassTo\\wwwroot\\Scripts\\Components\\nMap\\nMap.html",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-17T09:29:14.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.html",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\User\\User.html",
+              "RelativeDocumentMoniker": "PassTo\\wwwroot\\Scripts\\Components\\User\\User.html",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\User\\User.html",
+              "RelativeToolTip": "PassTo\\wwwroot\\Scripts\\Components\\User\\User.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-17T09:22:56.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.js",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\User\\User.js",
+              "RelativeDocumentMoniker": "PassTo\\wwwroot\\Scripts\\Components\\User\\User.js",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\User\\User.js",
+              "RelativeToolTip": "PassTo\\wwwroot\\Scripts\\Components\\User\\User.js",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-17T08:45:02.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Alertify.js",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\ReUse\\Alertify\\Alertify.js",
+              "RelativeDocumentMoniker": "PassTo\\wwwroot\\Scripts\\Components\\ReUse\\Alertify\\Alertify.js",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\wwwroot\\Scripts\\Components\\ReUse\\Alertify\\Alertify.js",
+              "RelativeToolTip": "PassTo\\wwwroot\\Scripts\\Components\\ReUse\\Alertify\\Alertify.js",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCQAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-17T08:44:52.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "PassTo\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "PassTo\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T09:14:28.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\appsettings.json",
+              "RelativeDocumentMoniker": "PassTo\\appsettings.json",
+              "ToolTip": "C:\\Users\\COE\\Documents\\Workspace\\PAS\\Code\\The PAS Tool\\The PAS Tool\\PassTo\\PassTo\\appsettings.json",
+              "RelativeToolTip": "PassTo\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-16T09:01:26.051Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
