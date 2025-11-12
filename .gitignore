@@ -1,3 +1,14 @@
+
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db-shm
+/PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db
+/PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db-wal
+/PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/SemanticSymbols.db-shm
+/PassTo/.vs/PassTo/FileContentIndex/3e69ade9-6ac0-4a45-8310-c380dd740fa5.vsidx
+=======
 PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db
 /PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db
 /PassTo/.vs/PassTo/CopilotIndices/17.14.670.39694/CodeChunks.db-shm
